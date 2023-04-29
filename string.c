@@ -31,8 +31,8 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (*s1 != *s2)
 			return (*s1 - *s2);
-			s1++;
-			s2++;
+		s1++;
+		s2++;
 	}
 	if (*s1 == *s2)
 		return (0);
@@ -70,6 +70,7 @@ char *_strcat(char *dest, char *src)
 		dest++;
 	while (*src)
 		*dest++ = *src++;
-		*dest = *src;
+	*dest = *src;
+
 	return (ret);
 }

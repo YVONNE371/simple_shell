@@ -64,11 +64,11 @@ ssize_t get_input(info_t *info)
 	{
 		j = i; /* init new iterator to current buf position */
 		p = buf + i; /* get pointer for return */
-			check_chain(info, buf, &j, i, len);
+		check_chain(info, buf, &j, i, len);
 		while (j < len) /* iterate to semicolon or end */
 
 		{																						if (is_chain(info, buf, &j))
-			break;
+				break;
 			j++;																				}
 		i = j + 1; /* increment past nulled ';'' */
 		if (i >= len) /* reached end of buffer? */
@@ -145,8 +145,9 @@ int _getline(info_t *info, char **ptr, size_t *length)
 	s += k - i;
 	i = k;
 	p = new_p;
-if (length)
-	*length = s;
+
+	if (length)
+		*length = s;
 	*ptr = p;
 	return (s);
 }
