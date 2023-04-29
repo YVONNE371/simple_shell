@@ -28,7 +28,7 @@ int hsh(info_t *info, char **av)
 		}
 		else if (interactive(info))
 			_putchar('\n');
-		free_info(info, 0) :
+		free_info(info, 0);
 	}
 	write_history(info);
 	free_info(info, 1);
